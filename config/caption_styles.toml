@@ -1,0 +1,28 @@
+# Caption presets — consumed by CaptionService when style != "none".
+
+[karaoke_yellow]
+font = "Montserrat ExtraBold"
+size_px = 74
+fill = "#FFE14D"
+stroke = "#111111"
+stroke_px = 6
+position = "bottom_center"
+safe_bottom_ratio = 0.14
+
+[karaoke_white]
+font = "Inter Black"
+size_px = 72
+fill = "#FFFFFF"
+stroke = "#000000"
+stroke_px = 6
+position = "bottom_center"
+safe_bottom_ratio = 0.14
+
+[pop_pink]
+font = "Poppins Black"
+size_px = 78
+fill = "#FF3DA6"
+stroke = "#1A0033"
+stroke_px = 7
+position = "center"
+safe_bottom_ratio = 0.0
