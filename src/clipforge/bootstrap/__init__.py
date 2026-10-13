@@ -1,0 +1,1 @@
+"""Bootstrap layer: CLI parsing, env loading, DI wiring."""
