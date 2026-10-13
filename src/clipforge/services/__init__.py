@@ -1,0 +1,1 @@
+"""Business services. Fat layer — orchestration, decisions, side effects."""
