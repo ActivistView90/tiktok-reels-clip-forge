@@ -1,0 +1,1 @@
+"""Small pure helpers. No state, no services."""
