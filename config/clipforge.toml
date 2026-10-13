@@ -1,0 +1,15 @@
+# tiktok-reels-clip-forge — default runtime config
+# Override any key via CLIPFORGE_* env vars (see bootstrap/settings.py).
+
+[clipforge]
+ffmpeg_binary = "ffmpeg"
+encode_threads = 4
+whisper_size = "small.en"
+default_target = "tiktok"
+min_clip_seconds = 12.0
+max_clip_seconds = 58.0
+hook_window_seconds = 3.5
+
+[render]
+caption_style = "karaoke_yellow"
+burn_subtitles = true
