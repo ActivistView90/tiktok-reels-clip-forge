@@ -1,0 +1,1 @@
+"""Handlers — thin dispatch surfaces. No business logic lives here."""
