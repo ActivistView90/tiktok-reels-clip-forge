@@ -1,0 +1,1 @@
+"""Platform + tool adapters. One adapter per external thing we don't own."""
