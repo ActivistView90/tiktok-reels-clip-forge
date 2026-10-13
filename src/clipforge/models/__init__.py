@@ -1,0 +1,1 @@
+"""Pure data models. No I/O, no globals, no service imports."""
