@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tiktok-reels-clip-forge"
+version = "0.7.3"
+description = "AI short-form clip generator for TikTok / Reels / Shorts — long-form in, vertical clips out."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "clipforge contributors" }]
+keywords = ["tiktok", "reels", "shorts", "clip-generator", "whisper", "ffmpeg", "vertical-video"]
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Multimedia :: Video :: Non-Linear Editor",
+]
+
+dependencies = [
+  "faster-whisper>=1.0.3",
+  "tomli>=2.0.1; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.112", "uvicorn[standard]>=0.30", "pydantic>=2.7"]
+dev = ["pytest>=8.2", "ruff>=0.5", "mypy>=1.10"]
+
+[project.scripts]
+clipforge = "clipforge.bootstrap.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/clipforge"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src/clipforge"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
